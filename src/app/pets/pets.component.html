@@ -1,0 +1,12 @@
+<p>pets works!</p>
+<div class="list-container flex flex-col items-center gap-[50px]">
+    <div class="hero flex items-center gap-[50px]">
+        <div class="hero flex flex-row border-double border-[10px] border-black-500 w-[150px] h-[150px]"></div>
+        <div class="hero flex flex-row border-double border-[10px] border-black-500 w-[250px] h-[150px]"></div>
+    </div>
+            
+</div>
+<app-pagination 
+[currentPage]="currentPage" 
+[limit]="5" [total]="50" 
+(changePage)="changePage($event)"></app-pagination>

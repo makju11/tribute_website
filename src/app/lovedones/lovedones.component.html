@@ -1,0 +1,23 @@
+<p>lovedones works!</p>
+
+<div class="list-container flex flex-col items-center gap-[50px]" *ngFor="let item of paginatedData; let index = index">
+    <div class="hero flex items-center gap-[50px]">
+        <div class="hero flex flex-row border-double border-[10px] border-black-500 w-[150px] h-[150px]"></div>
+        <div class="hero flex flex-row border-double border-[10px] border-black-500 w-[250px] h-[150px]">
+            <ul class="info">
+                <li class="name">NAME:{{item.name}}</li>
+                <li class="dob">DATE OF  BIRTH:{{item.dateOfBirth}}</li>
+                <li class="dod">DATE OF DEATH:{{item.dateOfDeath}}</li>
+                <li class="message">MESSAGE:{{item.message}}</li>
+            </ul>
+        </div>
+    </div>
+    
+            
+</div>
+<app-pagination 
+[currentPage]="1" 
+[limit]="data.length"
+[total]="total" 
+(changePage)="changePage($event)"></app-pagination>
+  

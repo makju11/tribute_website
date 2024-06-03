@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styles: []
+  selector: 'app-lovedones',
+  templateUrl: './lovedones.component.html',
+  styles: ``
 })
-export class AppComponent {
-  title = 'frontend';
-
+export class LovedonesComponent {
+  currentPage: number= 1;
+  changePage(page: number): void{
+    this.currentPage = page;
+  }
+  total = 2;
   data = [
     {
       name: 'Raul Lorejas',
@@ -70,4 +73,11 @@ export class AppComponent {
       message: 'with love and memories' 
     }
   ]
+
+  get paginatedData(){
+    const start = (this.currentPage -1) * this.total;
+    const end = start + this.total;
+
+    return this.data.slice(start, end);
+  }
 }
