@@ -6,7 +6,7 @@
         <div class="hero flex flex-row border-double border-[10px] border-black-500 w-[250px] h-[150px]">
             <ul class="info">
                 <li class="name">NAME:{{item.name}}</li>
-                <li class="dob">DATE OF  BIRTH:{{item.dateOfBirth}}</li>
+                <li class="dob">DATE OF BIRTH:{{item.dateOfBirth}}</li>
                 <li class="dod">DATE OF DEATH:{{item.dateOfDeath}}</li>
                 <li class="message">MESSAGE:{{item.message}}</li>
             </ul>
@@ -16,7 +16,7 @@
             
 </div>
 <app-pagination 
-[currentPage]="1" 
+[currentPage]="currentPage" 
 [limit]="data.length"
 [total]="total" 
 (changePage)="changePage($event)"></app-pagination>

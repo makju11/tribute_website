@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class PetsComponent {
-  currentPage: number= 1;
-  changePage(page: number): void{
-    this.currentPage = page;
-  }
+  // currentPage: number= 1;
+  // changePage(page: number): void{
+  //   this.currentPage = page;
+  // }
 
 }
